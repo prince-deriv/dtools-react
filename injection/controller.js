@@ -17,5 +17,20 @@ export const getContainer = (id = "") => {
   container.style.zIndex = "999999";
   container.style.overflow = "hidden";
 
+  const closeTrigger = document.createElement("span");
+  closeTrigger.style.position = "absolute";
+  closeTrigger.style.top = "7px";
+  closeTrigger.style.right = "8px";
+  closeTrigger.style.zIndex = "999";
+  closeTrigger.style.width = "24px";
+  closeTrigger.style.height = "24px";
+  closeTrigger.style.cursor = "pointer";
+
+  closeTrigger.addEventListener("click", () => {
+    container.remove();
+  });
+
+  container.appendChild(closeTrigger);
+
   return container;
 };

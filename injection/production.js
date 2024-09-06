@@ -34,7 +34,6 @@ const loadDToolsProduction = () => {
         if (scriptHash) {
           const reactAppDiv = document.createElement("div");
           reactAppDiv.id = "react-app-root";
-          document.getElementById("dtools-container").innerHTML = "";
           document.getElementById("dtools-container").append(reactAppDiv);
 
           const script = document.createElement("script");
