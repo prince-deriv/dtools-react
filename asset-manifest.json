@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "https://prince-deriv.github.io/dtools-react/static/css/main.b168169b.css",
-    "main.js": "https://prince-deriv.github.io/dtools-react/static/js/main.e1f45176.js",
+    "main.css": "https://prince-deriv.github.io/dtools-react/static/css/main.e1f0ff44.css",
+    "main.js": "https://prince-deriv.github.io/dtools-react/static/js/main.b779792b.js",
     "static/media/dtools.svg": "https://prince-deriv.github.io/dtools-react/static/media/dtools.efb82e09eea42ef818ba2deb94788438.svg",
     "index.html": "https://prince-deriv.github.io/dtools-react/index.html",
-    "main.b168169b.css.map": "https://prince-deriv.github.io/dtools-react/static/css/main.b168169b.css.map",
-    "main.e1f45176.js.map": "https://prince-deriv.github.io/dtools-react/static/js/main.e1f45176.js.map"
+    "main.e1f0ff44.css.map": "https://prince-deriv.github.io/dtools-react/static/css/main.e1f0ff44.css.map",
+    "main.b779792b.js.map": "https://prince-deriv.github.io/dtools-react/static/js/main.b779792b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b168169b.css",
-    "static/js/main.e1f45176.js"
+    "static/css/main.e1f0ff44.css",
+    "static/js/main.b779792b.js"
   ]
 }
