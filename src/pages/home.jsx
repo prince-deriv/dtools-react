@@ -19,7 +19,7 @@ const Home = () => {
       action: () => {
         setCurrentPage("test-account-generator");
       },
-      label: "Test Account",
+      label: "Add Test Account",
     },
   ];
 

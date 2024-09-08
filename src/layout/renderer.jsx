@@ -2,7 +2,11 @@ import { CONFIG } from "../config";
 import DToolsLogo from "../assets/images/dtools.svg";
 import { usePage } from "../providers/pageProvider";
 import { Navigation, Text } from "@deriv-com/quill-ui";
-import { LegacyCloseCircle1pxBlackIcon } from "@deriv/quill-icons/Legacy";
+import {
+  LegacyCloseCircle1pxBlackIcon,
+  LegacySettings1pxIcon,
+  LegacySettings2pxIcon,
+} from "@deriv/quill-icons/Legacy";
 import { useEffect, useState } from "react";
 import {
   StandaloneFileCircleInfoBoldIcon,
@@ -14,7 +18,7 @@ import {
 const Renderer = () => {
   const { currentPage, pages, setCurrentPage } = usePage();
   const [activeMenu, setActiveMenu] = useState(0);
-  const mainMenu = ["home", "changelog"];
+  const mainMenu = ["home", "changelog", "settings"];
 
   // Annoying lastpass UI breaking elements
   useEffect(() => {
@@ -45,6 +49,10 @@ const Renderer = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setActiveMenu(mainMenu.indexOf(currentPage));
+  }, [currentPage]);
+
   return (
     <section className="dtool-menu-container">
       <div className="header-container">
@@ -74,6 +82,11 @@ const Renderer = () => {
           activeIcon={<StandaloneFileCircleInfoBoldIcon iconSize="sm" />}
           icon={<StandaloneFileCircleInfoRegularIcon iconSize="sm" />}
           label="Changelog"
+        />
+        <Navigation.BottomAction
+          activeIcon={<LegacySettings2pxIcon iconSize="sm" width={18} />}
+          icon={<LegacySettings1pxIcon iconSize="sm" width={18} />}
+          label="Settings"
         />
       </Navigation.Bottom>
     </section>

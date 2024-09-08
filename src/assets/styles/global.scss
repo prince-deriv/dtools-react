@@ -80,6 +80,7 @@ body {
                 .quill-typography {
                     width: 60px;
                     text-wrap: wrap;
+                    text-align: center;
                 }
             }
         }
@@ -170,6 +171,40 @@ body {
                     border-top: solid 1px var(--semantic-color-slate-solid-surface-normal-midLow);
                 }
             }
+
+            .setting-box {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .setting-item {
+                    padding: var(--core-spacing-400) 0;
+                    display: flex;
+                    justify-content: space-between;
+                    border-top: solid 1px var(--semantic-color-slate-solid-surface-normal-midLow);
+                }
+            }
+        }
+    }
+}
+
+
+
+html {
+    &.dark {
+        .badge__container,
+        .form-container {
+            svg {
+                fill: #ffffff;
+
+                path {
+                    fill: #ffffff;
+                }
+            }
+        }
+        .setting-item,
+        .log-item {
+            border-top: solid 1px var(--semantic-color-slate-solid-surface-normal-high) !important;
         }
     }
 }
