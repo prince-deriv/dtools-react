@@ -1,0 +1,175 @@
+body {
+    background-color: var(--semantic-color-slate-solid-surface-frame-low);
+}
+
+.standard-btn {
+    width: fit-content;
+}
+
+.quill-textarea__container {
+    width: 100% !important;
+}
+
+.code-area {
+    width: 100%;
+    height: 90px !important;
+}
+
+.dtool-menu-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .header-container {
+        display: flex;
+        width: 100%;
+        padding: var(--core-spacing-400);
+        background-color: var(--semantic-color-slate-solid-surface-frame-mid);
+        justify-content: space-between;
+
+        .brand {
+            display: flex;
+            gap: var(--core-spacing-200);
+
+            img {
+                height: 25px;
+            }
+        }
+
+        .action-btn {
+            svg {
+                cursor: pointer;
+
+                &:hover {
+                    rect {
+                        fill: var(--component-button-bg-coral-primary-default);
+                    }
+                }
+            }
+        }
+    }
+
+    .body-container {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+
+
+        .menu-container {
+            display: flex;
+            padding: var(--core-spacing-800);
+            gap: var(--core-spacing-400);
+
+            .menu-btn {
+                flex-direction: column;
+                width: fit-content;
+                height: 80px;
+                gap: 0px;
+
+                svg {
+                    width: 32px;
+                    height: 32px;
+
+                    fill: #ffffff;
+
+                    g {
+                        fill: unset;
+                    }
+                }
+
+                .quill-typography {
+                    width: 60px;
+                    text-wrap: wrap;
+                }
+            }
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            padding: var(--core-spacing-800);
+            gap: var(--core-spacing-800);
+
+            .scroll-container {
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+                width: 100%;
+                height: 340px;
+                gap: var(--core-spacing-800);
+
+                /* Scrollbar styles for WebKit browsers */
+                &::-webkit-scrollbar {
+                    width: 4px;
+                    /* Adjust the width of the scrollbar */
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                    /* Track (progress bar) background */
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    ::-webkit-scrollbar-thumb {
+                        background: rgba(0, 0, 0, 0.1);
+                        /* Almost transparent thumb */
+                        border-radius: 2px;
+                        /* Small rounded corners */
+                    }
+                }
+
+                /* Optional: When the scrollbar thumb is hovered */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgba(0, 0, 0, 0.5);
+                    /* Darker color on hover */
+                }
+            }
+
+            .form-container {
+                display: flex;
+                flex-direction: column;
+                gap: var(--core-spacing-400);
+
+                .dropdown__wrapper {
+                    z-index: 1;
+                    position: relative;
+
+                    &[aria-expanded="true"] {
+                        z-index: 99;
+                    }
+                }
+
+                .quill-input__container {
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .action-container {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .code-container {
+                    margin: var(--core-spacing-200) 0;
+                }
+            }
+
+            .log-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .log-item {
+                    padding: var(--core-spacing-400) 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--core-spacing-200);
+                    border-top: solid 1px var(--semantic-color-slate-solid-surface-normal-midLow);
+                }
+            }
+        }
+    }
+}
