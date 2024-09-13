@@ -9,6 +9,8 @@ import Settings from "../pages/settings";
 import CookieHelper from "../helpers/cookie";
 import { COOKIE } from "../constants";
 import { UseTheme } from "@deriv-com/quill-ui";
+import QuillTokens from "../pages/features/quill-tokens";
+import TokenDetails from "../pages/features/quill-tokens/details";
 
 const pages = {
   home: <Home />,
@@ -18,6 +20,8 @@ const pages = {
   "test-account-generator-result": <TestAccountGeneratorResult />,
   changelog: <Changelog />,
   settings: <Settings />,
+  "quill-tokens": <QuillTokens />,
+  "token-details": <TokenDetails />,
 };
 
 const PageContext = createContext();
@@ -54,12 +58,7 @@ export const PageProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log("settings change");
     const isDarkMode = settings.is_dark_mode;
-
-    console.log({
-      isDarkMode,
-    });
 
     toggleTheme(isDarkMode ? "dark" : "light");
 

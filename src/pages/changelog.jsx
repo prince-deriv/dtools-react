@@ -26,6 +26,12 @@ const Changelog = () => {
         <div className="log-container">
           <div className="log-item">
             <Text bold size="sm">
+              1.0.2
+            </Text>
+            <Text size="sm">Added quill tokens cheatsheet</Text>
+          </div>
+          <div className="log-item">
+            <Text bold size="sm">
               1.0.1
             </Text>
             <Text size="sm">Added settings with dark mode</Text>

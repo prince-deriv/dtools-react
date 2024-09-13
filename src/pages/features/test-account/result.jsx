@@ -26,7 +26,7 @@ const TestAccountGeneratorResult = () => {
 
     return `perl create_account.pl ${email} ${password} ${brokerCode}  ${
       countryCode && countryCode.toLowerCase()
-    }  ${currency} ${accountType} `;
+    }  ${currency} ${accountType === "default" ? "" : accountType} `;
   };
 
   return (

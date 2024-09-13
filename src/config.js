@@ -1,5 +1,5 @@
 export const CONFIG = {
-  VERSION: "1.0.1",
+  VERSION: "1.0.2",
 };
 
 export const brokerCodes = ["VRTC", "CR", "MF", "MLT", "MX"];
@@ -425,7 +425,7 @@ export const currencies = [
 export const otherAccounts = [
   {
     title: "Default",
-    value: "",
+    value: "default",
   },
   {
     title: "Payment Agent",

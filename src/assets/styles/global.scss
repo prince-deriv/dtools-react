@@ -1,7 +1,3 @@
-body {
-    background-color: var(--semantic-color-slate-solid-surface-frame-low);
-}
-
 .standard-btn {
     width: fit-content;
 }
@@ -19,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: var(--semantic-color-slate-solid-surface-frame-low);
 
     .header-container {
         display: flex;
@@ -66,7 +63,8 @@ body {
                 height: 80px;
                 gap: 0px;
 
-                svg {
+                svg,
+                img {
                     width: 32px;
                     height: 32px;
 
@@ -184,6 +182,103 @@ body {
                     border-top: solid 1px var(--semantic-color-slate-solid-surface-normal-midLow);
                 }
             }
+
+            .search-result-container {
+                display: flex;
+                flex-direction: column;
+
+                .search-result-item {
+                    display: flex;
+                    padding: var(--core-spacing-400);
+                    border-top: solid 1px var(--semantic-color-slate-solid-surface-normal-midLow);
+                    font-family: 'Courier New', Courier, monospace !important;
+
+                    &:hover {
+                        background-color: var(--component-dropdownItem-bg-selected);
+
+                        .quill-typography {
+                            color: var(--component-dropdownItem-label-color-selectedWhite);
+                        }
+
+                        .action-item {
+
+                            svg,
+                            path {
+                                fill: var(--component-dropdownItem-label-color-selectedWhite);
+                            }
+                        }
+                    }
+
+
+                    .quill-typography {
+                        // font-family: var(--core-fontFamily-ibmPlex-mono);
+                        font-size: 12px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .action-box {
+                display: flex;
+                margin-left: auto;
+                gap: var(--core-spacing-200);
+
+                .action-item {
+                    display: flex;
+                    position: relative;
+                    cursor: pointer;
+
+                    svg {
+                        height: 18px;
+                        width: 18px;
+                    }
+
+                    .code-area {
+                        position: absolute;
+                        overflow: hidden;
+                        height: 20px !important;
+                        opacity: 0;
+                        cursor: pointer;
+                        resize: none;
+                    }
+
+                }
+            }
+
+            .tree-box {
+                display: flex;
+                flex-direction: column;
+                gap: var(--core-spacing-400);
+                padding-left: var(--core-spacing-800);
+
+                .tree-box-item {
+                    position: relative;
+                    display: flex;
+
+                    &.connector {
+                        &::before {
+                            content: " ";
+                            position: absolute;
+                            height: 31px;
+                            width: 12px;
+                            border-radius: 10px 0px 0px 10px;
+                            border: solid 1px var(--semantic-color-slate-solid-surface-normal-midLow);
+                            border-right: none;
+                            top: -20px;
+                            left: -15px;
+
+                        }
+                    }
+
+                    .badge {
+                        background-color: var(--core-color-solid-slate-200);
+                        border-radius: 2px;
+                        padding: 0 var(--core-spacing-400);
+                        color: var(--component-dropdownItem-label-color-selectedWhite);
+                        width: fit-content;
+                    }
+                }
+            }
         }
     }
 }
@@ -192,6 +287,7 @@ body {
 
 html {
     &.dark {
+
         .badge__container,
         .form-container {
             svg {
@@ -202,9 +298,21 @@ html {
                 }
             }
         }
+
         .setting-item,
         .log-item {
             border-top: solid 1px var(--semantic-color-slate-solid-surface-normal-high) !important;
+        }
+
+        .tree-box {
+            .tree-box-item {
+                &.connector {
+                    &::before {
+                        border: solid 1px var(--semantic-color-slate-solid-surface-normal-high) !important;
+                        border-right: none !important;
+                    }
+                }
+            }
         }
     }
 }

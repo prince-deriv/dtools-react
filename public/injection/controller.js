@@ -11,7 +11,7 @@ export const getContainer = (id = "") => {
   container.style.right = "10px";
   container.style.width = `${CONSTANTS.FRAME_WIDTH}px`;
   container.style.height = `${CONSTANTS.FRAME_HEIGHT}px`;
-  container.style.backgroundColor = "white";
+  container.style.backgroundColor = "transparent";
   container.style.boxShadow = "#000000 0px 0px 10px";
   container.style.borderRadius = "10px 10px 0px 0px";
   container.style.zIndex = "999999";

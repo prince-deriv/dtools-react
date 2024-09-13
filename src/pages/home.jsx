@@ -2,6 +2,7 @@ import { Button } from "@deriv-com/quill-ui";
 import { LegacyIdNumberIcon } from "@deriv/quill-icons/Legacy";
 import { usePage } from "../providers/pageProvider";
 import { DerivLightAccountIcon } from "@deriv/quill-icons/Illustration";
+import QuillTokenIcon from "../assets/images/quill-tokens.png";
 
 const Home = () => {
   const { setCurrentPage } = usePage();
@@ -21,6 +22,13 @@ const Home = () => {
       },
       label: "Add Test Account",
     },
+    {
+      icon: <img alt="" src={QuillTokenIcon} />,
+      action: () => {
+        setCurrentPage("quill-tokens");
+      },
+      label: "Quill Tokens",
+    },
   ];
 
   return (
@@ -29,7 +37,7 @@ const Home = () => {
         <Button
           key={`menu-${label}-${mkey}`}
           icon={icon}
-          color="coral"
+          color="black"
           label={label}
           className="menu-btn"
           size="sm"
