@@ -3,6 +3,7 @@ import { LegacyIdNumberIcon } from "@deriv/quill-icons/Legacy";
 import { usePage } from "../providers/pageProvider";
 import { DerivLightAccountIcon } from "@deriv/quill-icons/Illustration";
 import QuillTokenIcon from "../assets/images/quill-tokens.png";
+import { LabelPairedCircleUserMdBoldIcon } from "@deriv/quill-icons/LabelPaired";
 
 const Home = () => {
   const { setCurrentPage } = usePage();
@@ -28,6 +29,13 @@ const Home = () => {
         setCurrentPage("quill-tokens");
       },
       label: "Quill Tokens",
+    },
+    {
+      icon: <LabelPairedCircleUserMdBoldIcon />,
+      action: () => {
+        setCurrentPage("user-group");
+      },
+      label: "Git User Groups",
     },
   ];
 

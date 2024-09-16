@@ -56,10 +56,11 @@
             display: flex;
             padding: var(--core-spacing-800);
             gap: var(--core-spacing-400);
+            flex-wrap: wrap;
 
             .menu-btn {
                 flex-direction: column;
-                width: fit-content;
+                width: 100px;
                 height: 80px;
                 gap: 0px;
 
@@ -271,11 +272,13 @@
                     }
 
                     .badge {
-                        background-color: var(--core-color-solid-slate-200);
                         border-radius: 2px;
                         padding: 0 var(--core-spacing-400);
-                        color: var(--component-dropdownItem-label-color-selectedWhite);
+                        min-height: 24px;
                         width: fit-content;
+                        height: fit-content;
+                        color: var(--semantic-color-slate-solid-surface-normal-high);
+         
                     }
                 }
             }
@@ -310,6 +313,9 @@ html {
                     &::before {
                         border: solid 1px var(--semantic-color-slate-solid-surface-normal-high) !important;
                         border-right: none !important;
+                    }
+                    .badge {
+                        color: var(--semantic-color-slate-solid-surface-normal-high) !important;
                     }
                 }
             }
